@@ -1,21 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import EditorMap from './components/EditorMap/'
+// import CircularProgress from 'material-ui/CircularProgress';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <EditorMap 
+        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB0U8xPe2boLDrlV8II8z0IH0bKYcer4A"
+        loadingElement={
+            <div>
+                Hello
+            </div>
+        }
+        containerElement={
+          <div style={{ height: `700px`}} />
+        }
+        mapElement={
+          <div style={{ height: `700px`}} />
+        }    
+      />
     );
   }
 }
 
 export default App;
+
+
+// <div style={{ height: '100%' }}>
+//     <CircularProgress size={60} thickness={7}/>
+// </div>

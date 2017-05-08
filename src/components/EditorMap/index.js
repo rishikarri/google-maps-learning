@@ -12,15 +12,14 @@ const ctr = { lat: 34, lng: -85 };
 const EditorMap = withScriptjs(
 	withGoogleMap(
 		(props) =>
-			<GoogleMap 
-				ref={(googleMap) => {
-          		if (!googleMap) {
-            		return;
-          		}
-        	}}				
+			<GoogleMap 				
 				defaultCenter={ctr}
 				defaultZoom={8}
 			>	
+			{/*now that the map is built, lets go ahead and add a marker */}
+			<Marker 
+				position={ctr}
+			/>
 
 			</GoogleMap>			
 	)
